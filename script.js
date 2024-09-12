@@ -6,7 +6,7 @@ function calculateTax(income, expenses) {
     }
 
     const tax = (income - expenses) * 0.2;
-
+    
     return tax;
 }
 
@@ -52,7 +52,6 @@ function checkDigitsInName(name) {
         }
     }
 
-    return false;
 }
 
 // console.log(checkDigitsInName('Raj123'));
@@ -113,24 +112,6 @@ function waitingTime(waitingTimes, serialNumber) {
     return waitingTime;
 }
 
-//Another process: for of loop:
-function waitingTime(waitingTimes, serialNumber) {
-    if (!Array.isArray(waitingTimes) || typeof serialNumber !== 'number') {
-        return 'Invalid Input';
-    }
-
-    let totalTime = 0;
-
-    for (let time of waitingTimes) {
-        totalTime += time;
-    }
-
-    let averageTime = Math.round(totalTime / waitingTimes.length)
-    let remainingSerial = serialNumber - waitingTimes.length - 1;
-
-    const waitingTime = remainingSerial * averageTime;
-    return waitingTime;
-}
 
 // console.log(waitingTime([3, 5, 7, 11, 6], 10));
 // console.log(waitingTime([13, 2], 6));
